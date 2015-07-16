@@ -26,8 +26,9 @@ public class LostAndFoundController {
 			produces = "application/json")
 	@ResponseBody
 	public boolean save(@RequestBody LostAndFound lostAndFound) {
-		logger.debug("Received /lostandfounds/save POST call. " + lostAndFound);
+		logger.debug("Received /lostandfounds/save POST call: " + lostAndFound);
 		
+		lostAndFound.setFormId(getUniqueFormId());
 		lostAndFound.persist();
 		return true;
 	}
@@ -37,6 +38,7 @@ public class LostAndFoundController {
 	@ResponseBody
 	public LostAndFound get() {
 		LostAndFound lostAndFound = new LostAndFound();
+		lostAndFound.setFormId(getUniqueFormId());
 		lostAndFound.setCity("Astana");
 		lostAndFound.setDeclarantName("declarantName1");
 		lostAndFound.setLostDate(new Date());
@@ -44,13 +46,13 @@ public class LostAndFoundController {
 		return lostAndFound;
 	}
 	
-	private String getUniqueFormId() {
+	public static String getUniqueFormId() {
 		Date currentDate = new Date();
-		SimpleDateFormat format = new SimpleDateFormat("yyyy/MM/dd");
-		String DateToStr = format.format(currentDate);
+		SimpleDateFormat format = new SimpleDateFormat("yyyyMMddHHmmss");
+		String uniqueFormId = "BN" + format.format(currentDate);
 
-		
-		return "";
+		logger.debug("Unique form Id retrieved: " + uniqueFormId);
+		return uniqueFormId;
 	}
 
 }

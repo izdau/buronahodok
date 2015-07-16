@@ -28,6 +28,7 @@ privileged aspect LostAndFoundController_Roo_Controller {
             return "lostandfounds/create";
         }
         uiModel.asMap().clear();
+        lostAndFound.setFormId(LostAndFoundController.getUniqueFormId());
         lostAndFound.persist();
         return "redirect:/lostandfounds/" + encodeUrlPathSegment(lostAndFound.getId().toString(), httpServletRequest);
     }

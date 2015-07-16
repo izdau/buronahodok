@@ -2,7 +2,9 @@
 <div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
-    <page:show id="ps_kz_buronahodok_domain_LostAndFound" object="${lostandfound}" path="/lostandfounds" z="user-managed">
+    <page:show id="ps_kz_buronahodok_domain_LostAndFound" object="${lostandfound}" path="/lostandfounds" z="user-managed">    
+        <field:display field="formType" id="s_kz_buronahodok_domain_LostAndFound_formType" object="${lostandfound}" z="user-managed"/>
+        <field:display field="formId" id="s_kz_buronahodok_domain_LostAndFound_formId" object="${lostandfound}" z="user-managed"/>
         <field:display field="city" id="s_kz_buronahodok_domain_LostAndFound_city" object="${lostandfound}" z="user-managed"/>
         <field:display field="lostCategory" id="s_kz_buronahodok_domain_LostAndFound_lostCategory" object="${lostandfound}" z="user-managed"/>
         <field:display field="lostSubCategory" id="s_kz_buronahodok_domain_LostAndFound_lostSubCategory" object="${lostandfound}" z="user-managed"/>
@@ -14,7 +16,5 @@
         <field:display field="declarantName" id="s_kz_buronahodok_domain_LostAndFound_declarantName" object="${lostandfound}" z="user-managed"/>
         <field:display field="declarantPhone" id="s_kz_buronahodok_domain_LostAndFound_declarantPhone" object="${lostandfound}" z="user-managed"/>
         <field:display field="declarantEmail" id="s_kz_buronahodok_domain_LostAndFound_declarantEmail" object="${lostandfound}" z="user-managed"/>
-        <field:display field="formType" id="s_kz_buronahodok_domain_LostAndFound_formType" object="${lostandfound}" z="user-managed"/>
-        <field:display field="formId" id="s_kz_buronahodok_domain_LostAndFound_formId" object="${lostandfound}" z="ut/oIyNOl/ErlskmoyWD/VqchFU="/>
     </page:show>
 </div>

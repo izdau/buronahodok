@@ -4,14 +4,14 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_kz_buronahodok_domain_LostAndFound" items="${lostandfounds}" z="user-managed">
         <table:table data="${lostandfounds}" id="l_kz_buronahodok_domain_LostAndFound" path="/lostandfounds" z="user-managed">
+            <table:column id="c_kz_buronahodok_domain_LostAndFound_formType" property="formType" z="user-managed"/>
+            <table:column id="c_kz_buronahodok_domain_LostAndFound_formId" property="formId" z="user-managed"/>
             <table:column id="c_kz_buronahodok_domain_LostAndFound_city" property="city" z="user-managed"/>
             <table:column id="c_kz_buronahodok_domain_LostAndFound_lostCategory" property="lostCategory" z="user-managed"/>
             <table:column id="c_kz_buronahodok_domain_LostAndFound_lostSubCategory" property="lostSubCategory" z="user-managed"/>
             <table:column id="c_kz_buronahodok_domain_LostAndFound_name" property="name" z="user-managed"/>
             <table:column id="c_kz_buronahodok_domain_LostAndFound_surname" property="surname" z="user-managed"/>
             <table:column date="true" dateTimePattern="${lostAndFound_lostdate_date_format}" id="c_kz_buronahodok_domain_LostAndFound_lostDate" property="lostDate" z="user-managed"/>
-            <table:column id="c_kz_buronahodok_domain_LostAndFound_formType" property="formType" z="user-managed"/>
-            <table:column id="c_kz_buronahodok_domain_LostAndFound_formId" property="formId" z="ZWAnK5kU3Ad6zQgBsFbv0UGC/zE="/>
         </table:table>
     </page:list>
 </div>
